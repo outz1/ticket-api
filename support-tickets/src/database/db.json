@@ -5,7 +5,7 @@
       "equipment": "computador",
       "description": "computador não liga",
       "user_name": "Eduardo de Brito Soares",
-      "status": "open",
+      "status": "closed",
       "created_at": "2025-04-07T20:33:52.493Z",
       "updated_at": "2025-04-07T20:33:52.493Z"
     },
@@ -13,7 +13,7 @@
       "id": "bd27587a-007e-43a7-bc27-31f7e391cc65",
       "equipment": "teclado",
       "description": "tecla com double click",
-      "user_name": "Eduardo de Brito Soares",
+      "user_name": "Fulano Ciclano Beltrano",
       "status": "open",
       "created_at": "2025-04-07T20:57:12.760Z",
       "updated_at": "2025-04-07T20:57:12.760Z"
