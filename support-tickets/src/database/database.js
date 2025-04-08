@@ -39,9 +39,28 @@ export class Database {
         return Object.entries(filters).some(([key, value]) => {
           return row[key].toLowerCase().includes(value.toLowerCase());
         });
-
       });
     }
     return data;
+  }
+
+  update(table, id, data) {
+    const rowIndex = this.#database[table].findIndex((row) => row.id === id);
+
+    if (rowIndex > -1) {
+      this.#database[table][rowIndex] = {
+        ...this.#database[table][rowIndex],
+        ...data, // Sobrepõe os dados que foram passados na requisição, mantendo os dados que não foram passados
+      }
+      this.#persist();
+    }
+  }
+
+  delete(table, id) {
+    const rowIndex = this.#database[table].findIndex((row) => row.id === id);
+    if (rowIndex > -1) {
+      this.#database[table].splice(rowIndex, 1)
+      this.#persist()
+    }
   }
 }
